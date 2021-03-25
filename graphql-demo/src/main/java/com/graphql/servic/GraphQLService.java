@@ -36,8 +36,8 @@ public class GraphQLService {
     private AllBooksDataFetcher allBooksDataFetcher;
     @Autowired
     private BookDataFetcher bookDataFetcher;
-   // @Autowired
-    //private AddBookDataMutation addBookDataMutation;    
+    @Autowired
+    private AddBookDataMutation addBookDataMutation;    
 
     // load schema at application start up
     @PostConstruct
@@ -75,8 +75,8 @@ public class GraphQLService {
                 .type("Query", typeWiring -> typeWiring
                         .dataFetcher("allBooks", allBooksDataFetcher)
                         .dataFetcher("book", bookDataFetcher))
-              //  .type("Mutation", typeWiring -> typeWiring
-                //        .dataFetcher("createBook", addBookDataMutation))
+                .type("Mutation", typeWiring -> typeWiring
+                        .dataFetcher("createBook", addBookDataMutation))
                 .build();
     }
 
