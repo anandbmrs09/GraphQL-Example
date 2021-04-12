@@ -9,7 +9,7 @@ type Query {
 }
 
 type Mutation{
- createBook(isn: String,title: String,publisher: String,authors: String, publisherDate: String): Book
+ createBook(isn: String,title: String,publisher: String,authors: String, publisherDate: String, phoneNo: String): Book
 }
 
 type Book {
@@ -18,6 +18,7 @@ type Book {
   publisher: String
   authors: String
   publishedDate: String
+  phoneNo: String
 }
 
 

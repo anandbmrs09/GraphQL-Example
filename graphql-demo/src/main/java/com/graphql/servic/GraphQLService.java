@@ -58,13 +58,13 @@ public class GraphQLService {
     private void loadDataIntoHSQL() {
 
         Stream.of(
-                new Book("123", "Book of Clouds", "Kindle Edition",
-                        "King", "Nov 2017"),
+                new Book("123", "Book of Clouds", "Kindle ",
+                        "King", "Nov 2017","9876541230"),
                 new Book("124", "Cloud Arch & Engineering", "Orielly",
-                        "Andn", "Jan 2015"),
+                        "Andn", "Jan 2015","9876541230"),
                 new Book("125", "Java 9 Programming", "Orielly",
                              "Ram"
-                        , "Dec 2016")
+                        , "Dec 2016","9876541230")
         ).forEach(book -> {
             bookRepository.save(book);
         });

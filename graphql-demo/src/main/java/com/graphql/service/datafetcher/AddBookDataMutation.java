@@ -28,6 +28,8 @@ public class AddBookDataMutation implements DataFetcher<Book> {
 		String publisher = environment.getArgument("publisher");
 		String author =  environment.getArgument("authors");
 		String publishrDate = environment.getArgument("publisherDate");
+		String phoneNo = environment.getArgument("phoneNo");
+
 		System.out.println(id);
 		Book book = new Book();
 		
@@ -36,6 +38,7 @@ public class AddBookDataMutation implements DataFetcher<Book> {
 		book.setPublisher(publisher);
 		book.setAuthors(author);
 		book.setPublishedDate(publishrDate);
+		book.setPhoneNo(phoneNo);
 
 		return bookRepository.save(book);
 	}
